@@ -1,0 +1,27 @@
+<%- include('../partials/head'); %>
+<body class="container">
+  <%- include('../partials/header'); %>
+<main>
+  <div class="jumbotron">
+    <h1>This is great</h1>
+    <p>Welcome to templating using EJS</p>
+   <h2>Variable</h2>
+<!-- //Now, We will embed the variable to the HTML page as: -->
+      <p><%= tagline %></p>
+
+   <!-- //Now, We will embed the array to the HTML page as:  -->
+    <ul>
+           <% mascots.forEach(function(mascot) { %>
+         <li>
+          <strong><%= mascot.name %></strong>
+          representing <%= mascot.organization %>,
+          born <%= mascot.birth_year %>
+        </li>
+      <% }); %>
+    </ul>
+
+  </div>
+</main>
+  <%- include('../partials/footer'); %>
+</body>
+</html>

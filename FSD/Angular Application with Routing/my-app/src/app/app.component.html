@@ -1,0 +1,70 @@
+<!-- component 1 -->
+<app-hello-world></app-hello-world>
+
+<!-- component 2 -->
+<app-home></app-home>
+
+<!-- component 3 -->
+<app-comp3></app-comp3>
+
+
+<!-- styling the routing links  -->
+<head>
+    <meta charset="UTF-8">
+    <title>Routing Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .routing-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .routing-link {
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            color: #3498db;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .routing-link:hover {
+            background-color: #3498db;
+            color: #fff;
+        }
+    </style>
+</head>
+
+
+<!-- routing code -->
+<body>
+    <div class="routing-links">
+        <a [routerLink]="['/']" class="routing-link">
+            Home
+        </a>
+
+        <a [routerLink]="['/hello-world']" class="routing-link">
+            Component 1
+        </a>
+
+        <a [routerLink]="['/home']" class="routing-link">
+            Component 2
+        </a>
+
+        <a [routerLink]="['/comp3']" class="routing-link">
+            Component 3
+        </a>
+    </div>
+
+    <router-outlet></router-outlet>
+</body>
