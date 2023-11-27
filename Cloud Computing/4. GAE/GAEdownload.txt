@@ -1,0 +1,8 @@
+Google Cloud SDK download
+
+https://cloud.google.com/sdk/docs/install
+
+
+
+Path:
+google-cloud-sdk\bin\dev_appserver.py "Folder path"
